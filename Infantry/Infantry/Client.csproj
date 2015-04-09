@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{15112545-26D1-4EE6-A8C6-C946A9340391}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Infantry</RootNamespace>
+    <AssemblyName>Infantry</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <XnaPlatform>Windows</XnaPlatform>
+    <XnaProfile>Reach</XnaProfile>
+    <XnaCrossPlatformGroupID>9cf5b46b-4204-47aa-b333-2559e2c348b9</XnaCrossPlatformGroupID>
+    <XnaOutputType>Game</XnaOutputType>
+    <ApplicationIcon>Game.ico</ApplicationIcon>
+    <Thumbnail>GameThumbnail.png</Thumbnail>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Builds\Client\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <XnaCompressContent>false</XnaCompressContent>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <XnaCompressContent>true</XnaCompressContent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.GamerServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Storage, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Video, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Xact, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Net" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\AssetInfo.cs" />
+    <Compile Include="Assets\Attribute\AttributeInfo.cs" />
+    <Compile Include="Assets\Checksum.cs" />
+    <Compile Include="Assets\Flag\FlagInfo.cs" />
+    <Compile Include="Assets\GameType.cs" />
+    <Compile Include="Assets\Item\ItemInfo.cs" />
+    <Compile Include="Assets\Model\Models.cs" />
+    <Compile Include="Assets\Skill\SkillInfo.cs" />
+    <Compile Include="Assets\Team\TeamInfo.cs" />
+    <Compile Include="Assets\Terrain\TerrainInfo.cs" />
+    <Compile Include="Assets\Vehicle\VehicleInfo.cs" />
+    <Compile Include="Assets\Warp\WarpInfo.cs" />
+    <Compile Include="Assets\Weapon\WeaponInfo.cs" />
+    <Compile Include="Assets\Zone\ZoneInfo.cs" />
+    <Compile Include="Cameras\Camera.cs" />
+    <Compile Include="Cameras\FirstPersonCamera.cs" />
+    <Compile Include="Cameras\OverheadCamera.cs" />
+    <Compile Include="Cameras\ThirdPersonCamera.cs" />
+    <Compile Include="Handlers\InputHandler.cs" />
+    <Compile Include="Handlers\StringHandler.cs" />
+    <Compile Include="Helpers\DirectoryHelper.cs" />
+    <Compile Include="Helpers\FileHelper.cs" />
+    <Compile Include="Managers\CameraManager.cs" />
+    <Compile Include="Managers\ChatManager.cs" />
+    <Compile Include="Managers\GameManager.cs" />
+    <Compile Include="Managers\NetworkManager.cs" />
+    <Compile Include="Managers\ScreenManager.cs" />
+    <Compile Include="Managers\TextureManager.cs" />
+    <Compile Include="Network\NetworkClient.cs" />
+    <Compile Include="Network\Client.cs" />
+    <Compile Include="Network\Protocols\Connection\CS_AccountLogin.cs" />
+    <Compile Include="Network\Protocols\Connection\CS_DiscoveryPing.cs" />
+    <Compile Include="Network\Protocols\Connection\CS_JoinZone.cs" />
+    <Compile Include="Network\Protocols\Connection\SC_Status.cs" />
+    <Compile Include="Network\Protocols\Connection\SC_Disconnect.cs" />
+    <Compile Include="Network\Protocols\Connection\SC_DiscoveryPing.cs" />
+    <Compile Include="Network\Protocols\Game\Arena\CS\CS_ArenaList.cs" />
+    <Compile Include="Network\Protocols\Game\Arena\CS\CS_ArenaState.cs" />
+    <Compile Include="Network\Protocols\Game\Arena\CS\CS_LeftArena.cs" />
+    <Compile Include="Network\Protocols\Game\Arena\SC\SC_ArenaBots.cs" />
+    <Compile Include="Network\Protocols\Game\Arena\SC\SC_ArenaList.cs" />
+    <Compile Include="Network\Protocols\Game\Arena\SC\SC_ArenaState.cs" />
+    <Compile Include="Network\Protocols\Game\Arena\SC\SC_LeftArena.cs" />
+    <Compile Include="Network\Protocols\Game\Chat\CS_Chat.cs" />
+    <Compile Include="Network\Protocols\Game\Chat\SC_Chat.cs" />
+    <Compile Include="Network\Protocols\Game\Playing\CS\CS_Projectile.cs" />
+    <Compile Include="Network\Protocols\Initial\Assets\SC\SC_Items.cs" />
+    <Compile Include="Network\Protocols\Initial\Assets\SC\SC_Skills.cs" />
+    <Compile Include="Network\Protocols\Initial\Assets\SC\SC_TotalAssetChecksum.cs" />
+    <Compile Include="Network\Protocols\Initial\Assets\SC\SC_Vehicles.cs" />
+    <Compile Include="Network\Protocols\Initial\Assets\SC\SC_Weapons.cs" />
+    <Compile Include="Network\Protocols\Initial\Assets\SC\SC_ZoneInfo.cs" />
+    <Compile Include="Network\Protocols\Game\Playing\CS\CS_BuyItem.cs" />
+    <Compile Include="Network\Protocols\Game\Playing\CS\CS_DropItem.cs" />
+    <Compile Include="Network\Protocols\Game\Playing\CS\CS_FireWeapon.cs" />
+    <Compile Include="Network\Protocols\Game\Playing\CS\CS_FlagPickup.cs" />
+    <Compile Include="Network\Protocols\Game\Playing\CS\CS_JoinTeam.cs" />
+    <Compile Include="Network\Protocols\Game\Playing\CS\CS_PickUp.cs" />
+    <Compile Include="Network\Protocols\Game\Playing\CS\CS_SellItem.cs" />
+    <Compile Include="Network\Protocols\Game\Playing\CS\CS_SendPlayerState.cs" />
+    <Compile Include="Network\Protocols\Game\Playing\CS\CS_SpecMode.cs" />
+    <Compile Include="Network\Protocols\Game\Database\CS\CS_AttributeUpdate.cs" />
+    <Compile Include="Network\Protocols\Game\Database\CS\CS_InventoryUpdate.cs" />
+    <Compile Include="Network\Protocols\Game\Database\SC\SC_AttributeUpdate.cs" />
+    <Compile Include="Network\Protocols\Game\Database\SC\SC_InventoryUpdate.cs" />
+    <Compile Include="Network\Protocols\Game\Database\SC\SC_SkillUpdate.cs" />
+    <Compile Include="Network\Protocols\Game\Playing\SC\SC_BuyItem.cs" />
+    <Compile Include="Network\Protocols\Game\Playing\SC\SC_DropItem.cs" />
+    <Compile Include="Network\Protocols\Game\Playing\SC\SC_FireWeapon.cs" />
+    <Compile Include="Network\Protocols\Game\Playing\SC\SC_FlagPickup.cs" />
+    <Compile Include="Network\Protocols\Game\Playing\SC\SC_JoinTeam.cs" />
+    <Compile Include="Network\Protocols\Game\Playing\SC\SC_PickUp.cs" />
+    <Compile Include="Network\Protocols\Game\Playing\SC\SC_SellItem.cs" />
+    <Compile Include="Network\Protocols\Game\Playing\SC\SC_SendPlayerState.cs" />
+    <Compile Include="Network\Protocols\Game\Playing\SC\SC_SpecMode.cs" />
+    <Compile Include="Network\Protocols\Initial\CS_ZoneList.cs" />
+    <Compile Include="Network\Protocols\Initial\SC_ZoneList.cs" />
+    <Compile Include="Objects\Inventory.cs" />
+    <Compile Include="Objects\InventoryItem.cs" />
+    <Compile Include="Objects\Player.cs" />
+    <Compile Include="Objects\Textures.cs" />
+    <Compile Include="Objects\Vehicle.cs" />
+    <Compile Include="Objects\Weapon.cs" />
+    <Compile Include="Plugins\DllImport.cs" />
+    <Compile Include="Plugins\WinForm.cs" />
+    <Compile Include="Plugins\WinFormKey.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="GameBase.cs" />
+    <Compile Include="Screens\BackgroundScreen.cs" />
+    <Compile Include="Screens\Bases\BoxEntry.cs" />
+    <Compile Include="Screens\Bases\ButtonEntry.cs" />
+    <Compile Include="Screens\Bases\CheckBoxEntry.cs" />
+    <Compile Include="Screens\BusyScreen.cs" />
+    <Compile Include="Screens\CharSelect.cs" />
+    <Compile Include="Screens\FPSCounter.cs" />
+    <Compile Include="Screens\GameScreen.cs" />
+    <Compile Include="Screens\LoadingScreen.cs" />
+    <Compile Include="Screens\LoginScreen.cs" />
+    <Compile Include="Screens\MainOptionsScreen.cs" />
+    <Compile Include="Screens\Bases\MenuScreen.cs" />
+    <Compile Include="Screens\Bases\MessageBox.cs" />
+    <Compile Include="Screens\Bases\ScreenLayer.cs" />
+    <Compile Include="Screens\Special\EventArgs.cs" />
+    <Compile Include="Screens\Special\IMessageDisplay.cs" />
+    <Compile Include="Screens\Special\MessageDisplay.cs" />
+    <Compile Include="Screens\ZoneListScreen.cs" />
+    <Compile Include="Settings\DetailLevel.cs" />
+    <Compile Include="Settings\GameSetting.cs" />
+    <Compile Include="Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\UserSetting.cs" />
+    <Compile Include="UI\ChatScreen.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Game.ico" />
+    <Content Include="GameThumbnail.png">
+      <XnaPlatformSpecific>true</XnaPlatformSpecific>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Cryptokon\Cryptokon.csproj">
+      <Project>{409BC9CD-EB7E-4E34-8E66-8EAA58DB4FDA}</Project>
+      <Name>Cryptokon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Network\Network.csproj">
+      <Project>{49BA1C69-6104-41AC-A5D8-B54FA9F696E8}</Project>
+      <Name>Network</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PacketHeaders\PacketHeaders.csproj">
+      <Project>{3D34821C-C3A4-419B-A792-DBF281CF3C3D}</Project>
+      <Name>PacketHeaders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SkinningModelWindows\SkinningModelWindows.csproj">
+      <Project>{63417864-FBF6-4A5D-9770-9A1740537D14}</Project>
+      <Name>SkinningModelWindows</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InfantryContent\InfantryContent.contentproj">
+      <Name>InfantryContent %28Content%29</Name>
+      <XnaReferenceType>Content</XnaReferenceType>
+      <Project>{A6274FB9-97D5-4743-BBAD-D179AD76D32B}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Xna.Framework.4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft XNA Framework Redistributable 4.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
+  <!--
+      To modify your build process, add your task inside one of the targets below and uncomment it. 
+      Other similar extension points exist, see Microsoft.Common.targets.
+      <Target Name="BeforeBuild">
+      </Target>
+      <Target Name="AfterBuild">
+      </Target>
+    -->
+</Project>

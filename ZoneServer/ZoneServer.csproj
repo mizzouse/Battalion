@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2B8A5DFD-4DAB-40D6-8430-A9EF7E8293D6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZoneServer</RootNamespace>
+    <AssemblyName>ZoneServer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Builds\ZoneServer\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Assets.cs" />
+    <Compile Include="Network\Game\Chat\CS_Chat.cs" />
+    <Compile Include="Network\Connection\CS_Disconnect.cs" />
+    <Compile Include="Network\Connection\CS_JoinZone.cs" />
+    <Compile Include="Network\Connection\SC_Disconnect.cs" />
+    <Compile Include="Network\Game\Action\CS_Drop.cs" />
+    <Compile Include="Network\Game\Action\CS_PickUp.cs" />
+    <Compile Include="Network\Game\Action\CS_Projectile.cs" />
+    <Compile Include="Network\Game\Basic\SC_NewPlayer.cs" />
+    <Compile Include="Network\Game\CS_Movement.cs" />
+    <Compile Include="Network\Game\Store\CS_StoreBuy.cs" />
+    <Compile Include="Network\Game\Store\CS_StoreSell.cs" />
+    <Compile Include="Network\Receiver.cs" />
+    <Compile Include="Network\Routing\Functions.cs" />
+    <Compile Include="Objects\Arena.cs" />
+    <Compile Include="Objects\Drop.cs" />
+    <Compile Include="Objects\Player.cs" />
+    <Compile Include="Objects\Team.cs" />
+    <Compile Include="Objects\Vehicle.cs" />
+    <Compile Include="Objects\Zone.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ZoneServer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cryptokon\Cryptokon.csproj">
+      <Project>{409BC9CD-EB7E-4E34-8E66-8EAA58DB4FDA}</Project>
+      <Name>Cryptokon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DatabaseServer\DatabaseServer.csproj">
+      <Project>{E7380980-33AC-41EC-88A6-F5045715B643}</Project>
+      <Name>DatabaseServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Network\Network.csproj">
+      <Project>{49BA1C69-6104-41AC-A5D8-B54FA9F696E8}</Project>
+      <Name>Network</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PacketHeaders\PacketHeaders.csproj">
+      <Project>{3D34821C-C3A4-419B-A792-DBF281CF3C3D}</Project>
+      <Name>PacketHeaders</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Network\Assets\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
